@@ -6,79 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diacono81</title>
         
-    <head>
-        <title> Página de ventas express ofertas </title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f5f5f5;
-            }
-            .contenedor {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #fff;
-                box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            }
-            h1 {
-                font-size: 36px;
-                margin: 0 0 20px;
-            }
-            .producto {
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-                padding: 10px;
-            }
-            .producto img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 10px;
-            }
-            .boton {
-                background-color: #3d9ece;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-            .boton:hover {
-                background-color: #3e8e41;
-            }
-        </style>
-    </head>
-    <body>
-
-       
-        <div class="contenedor">
-            <h1>Ofertas Amazon OFF !!</h1>
-            <div class="producto">
-                <img src= "Fotos/imagen1.jpg" 
-                width="auto" 
-                height="auto"
-                alt="Producto 1">
-                <h2>OneOdio Pro10 Auriculares DJ con Cable, Estéreo de Mezcla y Monitor de Estudio, 50mm Controladores, 3.5 y 6.35mm Conector de Audio para PC AMP Grabación de Teléfono Piano Guitarra, Rojo y Negro</h2>
-               <!--  <p>Precio: $50</p> -->
-                <a href="https://amzn.to/3zKSpMZ">
-                    <button class="boton">Comprar</button>
-                  </a>
-                
-            </div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Fotos/op-donaciones.jpeg" alt="OP Donaciones" class="donaciones-img">
+    </div>
+    <div>
+        <a href="https://www.facebook.com/TU_PERFIL" target="_blank" class="facebook-link">
+            Visita mi perfil de Facebook👍
+        </a>
+    </div>
     
-            <div class="producto">
-                <img src="Fotos/imagen2.jpg" 
-                width="auto" 
-                height="auto"
-                alt="Producto 2">
-                <h2>TP-Link TAPO C200 - Cámara IP WiFi 360° Cámara de Vigilancia FHD 1080p,Visión nocturna Admite tarjeta SD,Detección de movimiento,Control Remoto,Compatible con Alexa, Multicolor,1 Unidad( Paquete de 1) </h2>
-               <!--  <p>Precio: $75</p> -->
-                <a href="https://amzn.to/3UimhKl">
-                    <button class="boton">Comprar</button>
-                </a>
-            </div>
-        </div>
-    </body>
-    </html>
 
+    <div class="wallet-container">
+        <h2>💲Wallet TRON TRC20</h2>
+        <span id="wallet">TRWJUzWJ9fVrKLSnKWXXVXWKZPJkGGY8xR</span>
+        <button class="copy-btn" onclick="copyText('wallet')">Copiar</button>
+    </div>
+
+    <div class="cvu-container">
+        <h2>🧊🤝MercadoPago</h2>
+        <span id="cvu">oscar.pinedo.81.mp</span>
+        <button class="copy-btn" onclick="copyText('cvu')">Copiar</button>
+    </div>
+
+    <script>
+        function copyText(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text)
+                .then(() => alert(`${elementId.toUpperCase()} copiado al portapapeles!`))
+                .catch(() => alert("Hubo un error al copiar el texto."));
+        }
+    </script>
+</body>
+</html>
