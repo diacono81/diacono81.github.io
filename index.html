@@ -9,35 +9,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="main-wrapper">
     <div class="container">
-        <img src="Fotos/op-donaciones.jpeg" alt="OP Donaciones" class="donaciones-img">
+      <img src="Fotos/Donaciones1.png" alt="OP Donaciones" class="donaciones-img">
     </div>
-    <div>
-        <a href="https://www.facebook.com/TU_PERFIL" target="_blank" class="facebook-link">
-            Visita mi perfil de Facebook👍
-        </a>
-    </div>
-    
 
     <div class="wallet-container">
-        <h2>💲Wallet TRON TRC20</h2>
-        <span id="wallet">TRWJUzWJ9fVrKLSnKWXXVXWKZPJkGGY8xR</span>
-        <button class="copy-btn" onclick="copyText('wallet')">Copiar</button>
+      <h2>💲 Wallet TRON TRC20</h2>
+      <span id="wallet">TRWJUzWJ9fVrKLSnKWXXVXWKZPJkGGY8xR</span>
+      <button class="copy-btn" onclick="copyText('wallet')">Copiar</button>
     </div>
 
     <div class="cvu-container">
-        <h2>🧊🤝MercadoPago</h2>
-        <span id="cvu">oscar.pinedo.81.mp</span>
-        <button class="copy-btn" onclick="copyText('cvu')">Copiar</button>
+      <h2>🧊🤝 MercadoPago</h2>
+      <span id="cvu">oscar.pinedo.81.mp</span>
+      <button class="copy-btn" onclick="copyText('cvu')">Copiar</button>
     </div>
-
-    <script>
-        function copyText(elementId) {
-            const text = document.getElementById(elementId).textContent;
-            navigator.clipboard.writeText(text)
-                .then(() => alert(`${elementId.toUpperCase()} copiado al portapapeles!`))
-                .catch(() => alert("Hubo un error al copiar el texto."));
-        }
-    </script>
+  </div>
 </body>
 </html>
